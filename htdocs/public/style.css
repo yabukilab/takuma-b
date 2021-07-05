@@ -1,0 +1,122 @@
+h2{
+    font-size: 60px;
+    width: 40%;
+    margin: 30px auto;
+    text-align: center;
+    font-family: serif;
+    padding: 0.2em;/*文字周りの余白*/
+    color: #010101;/*文字色*/
+    background: #FFFF;/*背景色*/
+    border-bottom: solid 3px #f19780;/*下線*/
+    
+
+
+}
+
+
+body{
+    background-color:#FFFF;
+}       
+
+#form{
+      width: 475px;
+      height: 375px;
+      margin: 30px auto;
+      font-size: 25px;
+      color: rgb(1, 13, 26);
+      background-color: rgb(235, 233, 233);
+      margin-top: -20px;
+      padding-left: 20px;
+      padding-top: 20px;
+      
+      
+      
+}
+
+label{
+    position: relative;
+    padding: 0.1em;
+    background: #ffd9ba;
+}
+
+label:after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 30px;
+    border: 5px solid transparent;
+    border-top: 5px solid #ffd9ba;
+    width: 0;
+    height: 0;
+  }
+
+
+ #loginform{
+    font-size: 70px;
+    width: 50%;
+    margin: 30px auto;
+    text-align: center;
+    font-family: serif;
+    padding: 0.5em;/*文字周りの余白*/
+    color: #010101;/*文字色*/
+    background: #FFFF;/*背景色*/
+    border-bottom: solid 3px #f1cd89;/*下線*/
+ }
+
+.button{
+    font-size: 20px;
+    background: rgb(211, 224, 241);
+}
+
+#mypage{
+    width: 600px;
+    height: 450px;
+    margin:30px  auto;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(235, 233, 233);
+    
+}
+
+#signup{
+    font-size: 60px;
+    width: 50%;
+    margin: 30px auto;
+    text-align: center;
+    font-family: serif;
+    padding: 0.2em;/*文字周りの余白*/
+    color: #010101;/*文字色*/
+    background:#FFFF;/*背景色*/
+    border-bottom: solid 3px #f19780;/*下線*/
+
+
+}
+
+#error{
+    color: red;
+    font-size: 30px;
+    text-align: center;
+}
+
+#link{
+    font-size: 25px;
+    margin-right: auto;
+    width: 20%;
+    position: relative;
+    top: 100px;
+    line-height: 1.5em;
+    
+
+}
+
+
+
+
+
+
+     
+
+
+
+
+
