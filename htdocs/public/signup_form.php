@@ -6,7 +6,7 @@ require_once './classes//UserLogic.php';
 
 $result = UserLogic::checkLogin();
 if($result) {
-  header('Location: mypage.php');
+  header('Location:login_form.php');
   return;
 }
 
