@@ -20,7 +20,7 @@ body{
 
 #form{
       width: 475px;
-      height: 375px;
+      height: 475px;
       margin: 30px auto;
       font-size: 25px;
       color: rgb(1, 13, 26);
@@ -68,18 +68,10 @@ label:after {
     background: rgb(211, 224, 241);
 }
 
-#mypage{
-    width: 600px;
-    height: 450px;
-    margin:30px  auto;
-    font-size: 25px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(235, 233, 233);
-    
-}
+
 
 #signup{
-    font-size: 60px;
+    font-size: 50px;
     width: 50%;
     margin: 30px auto;
     text-align: center;
