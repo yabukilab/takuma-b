@@ -31,27 +31,28 @@ unset($_SESSION['login_err']);
   <form action="register.php" method="POST">
   <div id="form">  
   <p>
-    <label for="username">ユーザ名：</label>
-    <input type="text" name="username">
+    <label for="username">ユーザ名</label>
+    <input type="text" name="username" size="60">
   </p>
   <p>
-    <label for="email">メールアドレス：</label>
-    <input type="email" name="email">
+    <label for="email">メールアドレス</label>
+    <input type="email" name="email" size="60">
   </p>
   <p>
-    <label for="password">パスワード：</label>
-    <input type="password" name="password">
+    <label for="password">パスワード</label>
+    <input type="password" name="password" size="60">
   </p>
   <p>
-    <label for="password_conf">パスワード確認：</label>
-    <input type="password" name="password_conf">
+    <label for="password_conf">パスワード確認</label>
+    <input type="password" name="password_conf" size="60">
   </p>
   <input type="hidden" name="csrf_token" value="<?php echo h(setToken()); ?>">
   <p>
     <input class="button" type="submit" value="新規登録">
   </p>
+  
   </form>
-  <a href="/public/login_form.php">ログインする</a>
+  
 </div>
 </body>
 </html>
