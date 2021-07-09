@@ -21,7 +21,10 @@ if(!$email = filter_input(INPUT_POST, 'email')) {
   $err[] = 'メールアドレスを記入してください。';
 }
 $password = filter_input(INPUT_POST, 'password');
-
+// 正規表現
+if (!preg_match($password)) {
+  $err[] = 'パスワード入力してください。';
+}
 $password_conf = filter_input(INPUT_POST, 'password_conf');
 if ($password !== $password_conf) {
   $err[] = '確認用パスワードと異なっています。';
