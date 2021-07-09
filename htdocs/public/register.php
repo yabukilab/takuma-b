@@ -21,10 +21,7 @@ if(!$email = filter_input(INPUT_POST, 'email')) {
   $err[] = 'メールアドレスを記入してください。';
 }
 $password = filter_input(INPUT_POST, 'password');
-// 正規表現
-if (!preg_match("/\A[a-z\d]{1,100}+\z/i",$password)) {
-  $err[] = 'パスワードは英数字1文字以上100文字以下にしてください。';
-}
+
 $password_conf = filter_input(INPUT_POST, 'password_conf');
 if ($password !== $password_conf) {
   $err[] = '確認用パスワードと異なっています。';
