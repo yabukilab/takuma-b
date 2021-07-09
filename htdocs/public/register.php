@@ -20,8 +20,10 @@ if(!$username = filter_input(INPUT_POST, 'username')) {
 if(!$email = filter_input(INPUT_POST, 'email')) {
   $err[] = 'メールアドレスを記入してください。';
 }
-if(!$password = filter_input(INPUT_POST, 'password');{
-  $err[] = 'パスワード入力してください。';
+$password = filter_input(INPUT_POST, 'password');
+// 正規表現
+if (!preg_match("/\A[a-z\d]{1,100}+\z/i",$password)) {
+  $err[] = 'パスワードを入力してください。';
 }
 $password_conf = filter_input(INPUT_POST, 'password_conf');
 if ($password !== $password_conf) {
