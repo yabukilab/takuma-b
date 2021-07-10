@@ -13,7 +13,7 @@ function connect()
 
     try {
         $pdo = new PDO('$dsn', '$user', '$pass');
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION,
+            $pdo->setAttribute(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_EMULATE_FETCH_MODE => PDO::FETCH_ASSOC);
     
         
