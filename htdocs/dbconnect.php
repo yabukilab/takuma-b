@@ -12,8 +12,8 @@ function connect()
 
     try {
         $pdo = new PDO($dsn, $user, $pass); 
-            $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             
         
         return $pdo;
