@@ -1,9 +1,9 @@
 <?php
-
+require_once 'env.php';
 
 function connect()
 {
-    $host = 'localhost';
+    $host = '127.0.0.1';
     $db   = isset($_SERVER['MYSQL_DB']) ? $_SERVER['MYSQL_DB']: 'user';
     $user = isset($_SERVER['MYSQL_USER']) ? $_SERVER['MYSQL_USER']: 'kou';
     $pass = isset($_SERVER['MYSQL_PASSWORD']) ? $_SERVER['MYSQL_PASSWORD']: 'fur1map@ss';
