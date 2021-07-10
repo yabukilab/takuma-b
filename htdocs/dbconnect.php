@@ -4,9 +4,9 @@ require_once 'env.php';
 function connect()
 {
     $host = DB_HOST;
-    $db   = DB_NAME;
-    $user = DB_USER;
-    $pass = DB_PASS;
+    $db   = isset($_SERVER['DB_NAME']) ? $_SERVER['DB_NAME']: 'user';
+    $user = isset($_SERVER['DB_USER']) ? $_SERVER['DB_USER']: 'kou';
+    $pass = isset($_SERVER['DB_PASS']) ? $_SERVER['DB_PASS']: 'fur1map@ss';
 
     $dsn = "mysql:host={$host};dbname={$db};charset=utf8mb4";
 
