@@ -3,7 +3,7 @@ require_once 'env.php';
 
 function connect()
 {
-    $host = 127.0.0.1;
+    $host = '127.0.0.1';
     $db   = isset($_SERVER['DB_NAME']) ? $_SERVER['DB_NAME']: 'user';
     $user = isset($_SERVER['DB_USER']) ? $_SERVER['DB_USER']: 'kou';
     $pass = isset($_SERVER['DB_PASS']) ? $_SERVER['DB_PASS']: 'fur1map@ss';
