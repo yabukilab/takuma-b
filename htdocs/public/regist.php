@@ -2,7 +2,7 @@
     ini_set('display_errors',1);
     error_reporting(E_ALL);
     session_start(); 
-    $pdo = new PDO('mysql:host=localhost; dbname=user; charset=utf8','kou','fur1map@ss');
+    $pdo = new PDO('mysql:host=localhost; dbname=mydb; charset=utf8','kou','furimapass');
     $name = $_POST['name'];//ユーザーから受け取った値を変数に入れる
    
     $email = $_POST['email'];
