@@ -8,7 +8,7 @@ function connect()
     $user = DB_USER;
     $pass = DB_PASS;
 
-    $dsn = ('mysql:host=$host; dbname=$db; charset=utf8mb4','kou','furimapass');
+    $dsn = ('mysql:host=$host; dbname=$db; charset=utf8mb4''kou''furimapass');
 
     try {
         $pdo = new PDO($dsn, $user, $pass, [
