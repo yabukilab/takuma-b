@@ -1,15 +1,8 @@
 <?php
-
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'user');
-define('DB_USER', 'kou');
-define('DB_PASS', "furimapass");
-
+require_once 'env.php';
 
 function connect()
 {
-
-    
     $host = DB_HOST;
     $db   = DB_NAME;
     $user = DB_USER;
@@ -18,12 +11,11 @@ function connect()
     $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
 
     try {
-        $pdo = new PDO($dsn, $user, $pass);
-        $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
-            
-        
-            
+        $pdo = new PDO($dsn, $user, $pass, [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+        ]);
+        return $pdo;
     } catch(PDOExeption $e) {
         echo '接続失敗です！'. $e->getMessage();
         exit();
