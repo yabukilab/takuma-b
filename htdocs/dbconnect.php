@@ -3,10 +3,10 @@ require_once 'env.php';
 
 function connect()
 {
-    $host = DB_HOST;
-    $db   = DB_NAME;
-    $user = DB_USER;
-    $pass = DB_PASS;
+    $host = "localhost";
+    $db   = "user";
+    $user = "kou";
+    $pass = "fur1map@ss";
 
     $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
 
