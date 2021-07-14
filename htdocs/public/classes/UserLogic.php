@@ -80,7 +80,7 @@ class UserLogic
     $arr[] = $email;
 
     try {
-      $stmt=function ->prepare($sql);
+      $stmt=function prepare($sql);
       $stmt->execute($arr);
       // SQLの結果を返す
       $user = $stmt->fetch();
