@@ -80,8 +80,9 @@ class UserLogic
     $arr[] = $email;
 
     try {
-      $stmt = h($email)->prepare($sql);
+      $prepare =$db ->prepare($sql);
       $stmt->execute($arr);
+      $result = $prepare->fetchall(PDO::FETCH_ASSOC);
       // SQLの結果を返す
       $user = $stmt->fetch();
       return $user;
