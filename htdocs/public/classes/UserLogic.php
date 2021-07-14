@@ -128,6 +128,7 @@ class UserLogic
   <title>Document</title>
 </head>
 <body>
+<p>うまく行かなければ↓にエラーが表示される．</p>
 <?php require_once '../../db.php'; ?>
 </body>
 </html>
