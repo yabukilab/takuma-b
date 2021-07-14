@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once './classes/UserLogic.php';
+require './classes/UserLogic.php';
 require ('../../db.php');
 
 //　ログインしているか判定し、していなかったら新規登録画面へ返す
