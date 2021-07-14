@@ -1,6 +1,6 @@
 <?php
 
-require '../db.php';
+require_once '../dbconnect.php';
 
 class UserLogic
 {
@@ -82,7 +82,6 @@ class UserLogic
     try {
       $stmt = connect()->prepare($sql);
       $stmt->execute($arr);
-      
       // SQLの結果を返す
       $user = $stmt->fetch();
       return $user;
