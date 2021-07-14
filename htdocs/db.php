@@ -9,6 +9,21 @@ function h($var) {
   }
 }
 
+/**
+ * CSRF対策
+ * @param void
+ * @return string $csrf_token
+ */
+function setToken() {
+  // トークンを生成
+  // フォームからそのトークンを送信
+  // 送信後の画面でそのトークンを照会
+  // トークンを削除
+  $csrf_token = bin2hex(random_bytes(32));
+  $_SESSION['csrf_token'] = $csrf_token;
+
+  return $csrf_token;
+
 $dbServer = '127.0.0.1';
 $dbUser = isset($_SERVER['MYSQL_USER'])     ? $_SERVER['MYSQL_USER']     : 'testuser';
 $dbPass = isset($_SERVER['MYSQL_PASSWORD']) ? $_SERVER['MYSQL_PASSWORD'] : 'pass';
