@@ -1,6 +1,6 @@
 <?php
 
-require_once '../db.php';
+require_once '../../db.php';
 
 class UserLogic
 {
@@ -80,7 +80,7 @@ class UserLogic
     $arr[] = $email;
 
     try {
-      $stmt =h($db)->prepare($sql);
+      $stmt = connect()->prepare($sql);
       $stmt->execute($arr);
       // SQLの結果を返す
       $user = $stmt->fetch();
