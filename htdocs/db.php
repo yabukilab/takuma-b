@@ -23,6 +23,7 @@ function setToken() {
   $_SESSION['csrf_token'] = $csrf_token;
 
   return $csrf_token;
+}
 
 $dbServer = '127.0.0.1';
 $dbUser = isset($_SERVER['MYSQL_USER'])     ? $_SERVER['MYSQL_USER']     : 'testuser';
