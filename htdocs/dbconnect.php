@@ -14,9 +14,9 @@ function connect()
         $pdo = new PDO($dsn, $user, $pass);
         
     # プリペアドステートメントのエミュレーションを無効にする．
-    $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     # エラー→例外
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
        
     } catch(PDOExeption $e) {
         echo '接続失敗です！'. $e->getMessage();
