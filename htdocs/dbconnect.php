@@ -16,10 +16,10 @@ function connect()
         $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
            
-        return $pdo;
+    
     } catch(PDOExeption $e) {
         echo '接続失敗です！'. $e->getMessage();
-        exit();
+        
     }
 
 
