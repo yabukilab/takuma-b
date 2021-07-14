@@ -11,7 +11,7 @@ function connect()
     $dsn = "mysql:host={$dbServer};dbname={$db};charset=utf8";
 
     try {
-        $pdo = new PDO($dsn, $user, $pass,);
+        $pdo = new PDO($dsn, $user, $pass);
         
     # プリペアドステートメントのエミュレーションを無効にする．
     $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
