@@ -22,7 +22,7 @@ class UserLogic
     $arr[] = password_hash($userData['password'], PASSWORD_DEFAULT);
 
     try {
-      $stmt = $db->query($sql);
+      $stmt = isset($db)->query($sql);
       $result = $stmt->execute($arr);
       return $result;
     } catch(\Exception $e) {
