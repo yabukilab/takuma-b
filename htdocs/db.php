@@ -26,6 +26,8 @@ function setToken() {
   return $csrf_token;
 }
 
+# HTMLでのエスケープ処理をする関数（データベースとは無関係だが，ついでにここで定義しておく．）
+function connect(){
 
 $dbServer = '127.0.0.1';
 $dbUser = isset($_SERVER['MYSQL_USER'])     ? $_SERVER['MYSQL_USER']     : 'testuser';
@@ -42,4 +44,5 @@ try {
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
   echo "Can't connect to the database: " . h($e->getMessage());
+}
 }
