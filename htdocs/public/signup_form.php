@@ -32,19 +32,19 @@ unset($_SESSION['login_err']);
   <div id="form">  
   <p>
     <label for="username">ユーザ名</label>
-    <input type="text" name="username" size="60">
+    <input type="text" name="username" size="60" required>
   </p>
   <p>
     <label for="email">メールアドレス</label>
-    <input type="email" name="email" size="60">
+    <input type="email" name="email" size="60" required>
   </p>
   <p>
     <label for="password">パスワード</label>
-    <input type="password" name="password" size="60">
+    <input type="password" name="password" size="60"requied>
   </p>
   <p>
     <label for="password_conf">パスワード確認</label>
-    <input type="password" name="password_conf" size="60">
+    <input type="password" name="password_conf" size="60" required>
   </p>
   <input type="hidden" name="csrf_token" value="<?php echo h(setToken()); ?>">
   <p>
