@@ -2,7 +2,7 @@
 
 function getUserData($params){
 	//DBの接続情報
-	require_once '../db.php';
+	require_once '../../db.php';
 
 	$host = DB_HOST;
     $db   = DB_NAME;
