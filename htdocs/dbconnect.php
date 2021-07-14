@@ -1,9 +1,10 @@
 <?php
 require_once 'env.php';
-require_once '../functions.php';
 
-function connect()
-{
+function h($str) {
+    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+  }
+
     $host =DB_HOST;
     $db   = DB_NAME;
     $user = DB_USER;
@@ -23,7 +24,7 @@ function connect()
     }
 
 
-}
+
 
 
 
