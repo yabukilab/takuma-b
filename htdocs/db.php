@@ -25,6 +25,7 @@ function setToken() {
   return $csrf_token;
 }
 
+function connect(){
 $dbServer = '127.0.0.1';
 $dbUser = isset($_SERVER['MYSQL_USER'])     ? $_SERVER['MYSQL_USER']     : 'testuser';
 $dbPass = isset($_SERVER['MYSQL_PASSWORD']) ? $_SERVER['MYSQL_PASSWORD'] : 'pass';
@@ -40,4 +41,5 @@ try {
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
   echo "Can't connect to the database: " . h($e->getMessage());
+}
 }
