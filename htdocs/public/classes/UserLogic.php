@@ -80,7 +80,7 @@ class UserLogic
     $arr[] = $email;
 
     try {
-      $prepare =connect()->prepare($sql);
+      $prepare =getUserByEmail($email)->prepare($sql);
       $stmt->execute($arr);
       
       // SQLの結果を返す
