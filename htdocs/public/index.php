@@ -35,7 +35,7 @@ $PData = getUserData($_GET);
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="width=device-width, initial-scale=1">
 <title>PHPの検索機能</title>
 <link rel="stylesheet" href="style.css">
 <!-- Bootstrap読み込み（スタイリングのため） -->
