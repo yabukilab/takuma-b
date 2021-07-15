@@ -11,7 +11,6 @@ function getUserData($params){
 
     $dsn = "mysql:host={$dbServer};dbname={$dbName};charset=utf8mb4";
 
-
 	//DBコネクタを生成
 	$Mysqli = new mysqli($dbServer, $dbUser, $dbPass, $dbName);
 	if ($Mysqli->connect_error) {
