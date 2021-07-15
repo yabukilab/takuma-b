@@ -21,6 +21,7 @@ if(isset($_POST['datapost'])){
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <title>出品ページ</title>
     </head>
