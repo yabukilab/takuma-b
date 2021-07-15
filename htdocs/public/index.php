@@ -71,6 +71,7 @@ $PData = getUserData($_GET);
 	<?php //③取得データを表示する ?>
 	<?php if(isset($PData) && count($PData)): ?>
 	
+		
 		<p class="alert alert-success"><?php echo count($PData) ?>件見つかりました。</p>
 		<table class="table">
 			<thead>
