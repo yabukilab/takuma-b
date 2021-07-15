@@ -36,7 +36,6 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (18,'pen','s1942121bb@s.chibakoudai.jp'),(19,'きょうかしょ','s1942121nn@s.chibakoudai.jp'),(21,'過去問','s1942121aa@s.chibakoudai.jp');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -76,4 +75,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-15 19:02:51
+-- Dump completed on 2021-07-15 19:28:29
