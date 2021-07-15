@@ -49,8 +49,12 @@ unset($_SESSION['login_err']);
   </p>
   <input type="hidden" name="csrf_token" value="<?php echo h(setToken()); ?>">
   <p>
-    <input class="button" type="submit" value="新規登録"><br>
-    <a href= 'login_form.php'>ログインページ</p>
+    <input class="button" type="submit" value="新規登録">
+  </p>
+    
+  <p>
+    <a href= 'login_form.php'>ログインページ</a>
+</p>
   
   </form>
   
