@@ -9,7 +9,7 @@ function getUserData($params){
     $dbPass = isset($_SERVER['MYSQL_PASSWORD']) ? $_SERVER['MYSQL_PASSWORD'] : 'pass';
     $dbName = isset($_SERVER['MYSQL_DB'])       ? $_SERVER['MYSQL_DB']       : 'mydb';
 
-    $dsn = "mysql:host={$dbServer};dbname={$dbName};charset=utf8mb4";
+    $dsn = "mysql:host={$dbServer};dbname={$dbName};charset=utf8";
 
 
 	//DBコネクタを生成
