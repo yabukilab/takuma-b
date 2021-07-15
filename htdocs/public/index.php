@@ -87,13 +87,12 @@ $PData = getUserData($_GET);
 				<?php foreach($PData as $row): ?>
 					<tr>
 						<td><?php echo htmlspecialchars($row['name']) ?></td>
+						<td><?php echo htmlspecialchars($row['name'], ENT_QUOTES, 'SJIS') ?></td>
+						<td><?php echo htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8') ?></td>
 						<td><?php echo htmlspecialchars($row['email']) ?></td>
-						
-						
 					</tr>
 				<?php endforeach; ?>
 				
-	
 			</tbody>
 		</table>
 	<?php else: ?>
