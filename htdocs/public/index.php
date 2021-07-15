@@ -36,10 +36,6 @@ $PData = getUserData($_GET);
 <head>
 <meta charset="utf-8" />
 
-<?php
-ini_set('mbstring.internal_encoding' , 'UTF-8');
-?>
-
 <meta content="width=device-width, initial-scale=1">
 <title>PHPの検索機能</title>
 <link rel="stylesheet" href="style.css">
@@ -81,11 +77,16 @@ ini_set('mbstring.internal_encoding' , 'UTF-8');
 		<table class="table">
 			<thead>
 				<tr>
-					<th>商品名</th>
+					<th>商品名aaaa</th>
 					<th>メールアドレス</th>
 					
 				</tr>
 			</thead>
+
+			<?php
+				ini_set('mbstring.internal_encoding' , 'UTF-8');
+			?>
+
 			<tbody>
 				<?php foreach($PData as $row): ?>
 					<tr>
