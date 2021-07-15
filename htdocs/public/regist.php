@@ -2,8 +2,17 @@
     ini_set('display_errors',1);
     error_reporting(E_ALL);
     session_start(); 
+
+    require_once '../db.php';
+
+	$dbServer = '127.0.0.1';
+    $dbUser = isset($_SERVER['MYSQL_USER'])     ? $_SERVER['MYSQL_USER']     : 'testuser';
+    $dbPass = isset($_SERVER['MYSQL_PASSWORD']) ? $_SERVER['MYSQL_PASSWORD'] : 'pass';
+    $dbName = isset($_SERVER['MYSQL_DB'])       ? $_SERVER['MYSQL_DB']       : 'mydb';
+
+    $dsn = "mysql:host={$dbServer};dbname={$dbName};charset=utf8mb4";
    
-    $pdo = new PDO('mysql:host=127.0.0.1; dbname=mydb; charset=utf8mb4','testuser','pass');
+    $pdo = new PDO($dsn, $dbUser, $dbPass);
    
     $name = $_POST['name'];//ユーザーから受け取った値を変数に入れる
    
