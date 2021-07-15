@@ -13,6 +13,7 @@ function getUserData($params){
 
 	//DBコネクタを生成
 	$Mysqli = new mysqli($dbServer, $dbUser, $dbPass, $dbName);
+	$Mysqli->set_charaset("utf8mb4");
 	if ($Mysqli->connect_error) {
 			error_log($Mysqli->connect_error);
 			exit;
