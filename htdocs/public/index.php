@@ -86,9 +86,9 @@ $PData = getUserData($_GET);
 			<tbody>
 				<?php foreach($PData as $row): ?>
 					<tr>
+						<?php $text1 = mb_convert_encoding($row['name'], 'SJIS', 'UTF-8') ?>
+						<td><?php echo htmlspecialchars($text1) ?></td>
 						<td><?php echo htmlspecialchars($row['name']) ?></td>
-						<td><?php echo htmlspecialchars($row['name'], ENT_QUOTES, 'SJIS') ?></td>
-						<td><?php echo htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8') ?></td>
 						<td><?php echo htmlspecialchars($row['email']) ?></td>
 					</tr>
 				<?php endforeach; ?>
