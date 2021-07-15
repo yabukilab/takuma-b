@@ -35,6 +35,11 @@ $PData = getUserData($_GET);
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+
+<?php
+ini_set('mbstring.internal_encoding' , 'UTF-8');
+?>
+
 <meta content="width=device-width, initial-scale=1">
 <title>PHPの検索機能</title>
 <link rel="stylesheet" href="style.css">
@@ -71,7 +76,7 @@ $PData = getUserData($_GET);
 	<?php //③取得データを表示する ?>
 	<?php if(isset($PData) && count($PData)): ?>
 	
-		
+
 		<p class="alert alert-success"><?php echo count($PData) ?>件見つかりました。</p>
 		<table class="table">
 			<thead>
