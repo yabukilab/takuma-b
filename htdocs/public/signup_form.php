@@ -40,7 +40,8 @@ unset($_SESSION['login_err']);
   </p>
   <p>
     <label for="password">パスワード</label>
-    <input type="password" name="password" size="60"required>
+    <input type="password" name="password" size="60" a
+    required>
   </p>
   <p>
     <label for="password_conf">パスワード確認</label>
