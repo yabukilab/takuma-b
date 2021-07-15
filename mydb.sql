@@ -1,111 +1,79 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
+-- MariaDB dump 10.19  Distrib 10.4.20-MariaDB, for Win64 (AMD64)
 --
--- ホスト: 127.0.0.1
--- 生成日時: 2021-07-15 10:06:52
--- サーバのバージョン： 10.4.20-MariaDB
--- PHP のバージョン: 8.0.8
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
+-- Host: localhost    Database: mydb
+-- ------------------------------------------------------
+-- Server version	10.4.20-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- データベース: `mydb`
+-- Table structure for table `product`
 --
 
--- --------------------------------------------------------
-
---
--- テーブルの構造 `product`
---
-
+DROP TABLE IF EXISTS `product`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `product` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- テーブルのデータのダンプ `product`
+-- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`id`, `name`, `email`) VALUES
-(1, '教科書', 's1942121nn@s.chibakoudai.jp'),
-(2, 'pen', 's1942121nn@s.chibakoudai.jp'),
-(10, 'textbook', 's1942121nn@s.chibakoudai.jp'),
-(17, 'book', 's1942121nn@s.chibakoudai.jp'),
-(18, 'pen', 's1942121bb@s.chibakoudai.jp'),
-(19, '教科書', 's1942121nn@s.chibakoudai.jp'),
-(20, 'textbook', 's1942121nn@s.chibakoudai.jp'),
-(21, '過去問', 's1942121aa@s.chibakoudai.jp');
-
--- --------------------------------------------------------
+LOCK TABLES `product` WRITE;
+/*!40000 ALTER TABLE `product` DISABLE KEYS */;
+INSERT INTO `product` VALUES (1,'教科書','s1942121nn@s.chibakoudai.jp'),(2,'pen','s1942121nn@s.chibakoudai.jp'),(10,'textbook','s1942121nn@s.chibakoudai.jp'),(17,'book','s1942121nn@s.chibakoudai.jp'),(18,'pen','s1942121bb@s.chibakoudai.jp'),(19,'教科書','s1942121nn@s.chibakoudai.jp'),(20,'textbook','s1942121nn@s.chibakoudai.jp'),(21,'過去問','s1942121aa@s.chibakoudai.jp');
+/*!40000 ALTER TABLE `product` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
--- テーブルの構造 `users`
+-- Table structure for table `users`
 --
 
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- テーブルのデータのダンプ `users`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
-(1, 'kou', 's1942121nn@s.chibakoudai.jp', '$2y$10$sw4A4L80WOGuIMHrEUpFzOUCvjYOnO/vbI/Z40tZGPp3.56cXTLAm'),
-(3, 'b', 's1942121bb@s.chibakoudai.jp', '$2y$10$zFgA0StR7aq7Hln.INalEeMWzTUDJ75JfIAUUtxtTYA648/S0.cw6'),
-(4, 'user1', 'user1@s.chibakoudai.jp', '$2y$10$Lf2b2RgelvVOkWOkxZI4au5os76fNWS/NFCRV6v9npba8Y0Ewsjf2'),
-(5, 'user2', 'user2@s.chibakoudai.jp', '$2y$10$G23sDMd9l6xgzXoDMAy3UOpeHflujv5Gklxeychd8aPAMKVZSOXAe'),
-(6, 'user3', 'user3@s.chibakoudai.jp', '$2y$10$0awu3yU0X2O7cAY/ShX4v.UPsTibACFTWGgNMf/g0nauRlTL64V8a'),
-(7, 'a', 's1942121aa@s.chibakoudai.jp', '$2y$10$yadeqPmvFUgiOxXih2WjQu6SH7sZTxe6SozbFPwgISJwGeCylQ8uO');
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'kou','s1942121nn@s.chibakoudai.jp','$2y$10$sw4A4L80WOGuIMHrEUpFzOUCvjYOnO/vbI/Z40tZGPp3.56cXTLAm'),(3,'b','s1942121bb@s.chibakoudai.jp','$2y$10$zFgA0StR7aq7Hln.INalEeMWzTUDJ75JfIAUUtxtTYA648/S0.cw6'),(4,'user1','user1@s.chibakoudai.jp','$2y$10$Lf2b2RgelvVOkWOkxZI4au5os76fNWS/NFCRV6v9npba8Y0Ewsjf2'),(5,'user2','user2@s.chibakoudai.jp','$2y$10$G23sDMd9l6xgzXoDMAy3UOpeHflujv5Gklxeychd8aPAMKVZSOXAe'),(6,'user3','user3@s.chibakoudai.jp','$2y$10$0awu3yU0X2O7cAY/ShX4v.UPsTibACFTWGgNMf/g0nauRlTL64V8a'),(7,'a','s1942121aa@s.chibakoudai.jp','$2y$10$yadeqPmvFUgiOxXih2WjQu6SH7sZTxe6SozbFPwgISJwGeCylQ8uO');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
---
--- ダンプしたテーブルのインデックス
---
-
---
--- テーブルのインデックス `product`
---
-ALTER TABLE `product`
-  ADD PRIMARY KEY (`id`);
-
---
--- テーブルのインデックス `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
-
---
--- ダンプしたテーブルの AUTO_INCREMENT
---
-
---
--- テーブルの AUTO_INCREMENT `product`
---
-ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
---
--- テーブルの AUTO_INCREMENT `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-COMMIT;
-
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-07-15 17:52:29
