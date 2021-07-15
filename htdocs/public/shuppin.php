@@ -45,7 +45,7 @@ if(isset($_POST['datapost'])){
      
             
             <input class="button" type="submit" name="datapost" value="登録">
-            <p><a href="./index.php">トップページに戻る</a></p>
+            <p><a href="./index.php">検索画面に戻る</a></p>
        </form>
     
     
