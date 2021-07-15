@@ -77,20 +77,16 @@ $PData = getUserData($_GET);
 		<table class="table">
 			<thead>
 				<tr>
-					<th>商品名aaaa</th>
+					<th>商品名</th>
 					<th>メールアドレス</th>
 					
 				</tr>
 			</thead>
 
-			<?php
-				ini_set('mbstring.internal_encoding' , 'UTF-8');
-			?>
-
 			<tbody>
 				<?php foreach($PData as $row): ?>
 					<tr>
-						<td><?php echo htmlspecialchars($row['name']) ?></td>
+						<td><?php echo htmlspecialchars($row['name'], 'UTF-8') ?></td>
 						<td><?php echo htmlspecialchars($row['email']) ?></td>
 						
 						
