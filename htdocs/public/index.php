@@ -86,7 +86,7 @@ $PData = getUserData($_GET);
 			<tbody>
 				<?php foreach($PData as $row): ?>
 					<tr>
-						<td><?php echo htmlspecialchars($row['name'],  ENT_QUOTES, 'UTF-8') ?></td>
+						<td><?php echo htmlspecialchars($row['name']) ?></td>
 						<td><?php echo htmlspecialchars('ようこそ', ENT_QUOTES) ?></td>
 						<td><?php echo htmlspecialchars($row['email']) ?></td>
 						
