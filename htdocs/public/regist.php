@@ -3,7 +3,7 @@
     error_reporting(E_ALL);
     session_start(); 
    
-    $pdo = new PDO('mysql:host=localhost; dbname=mydb; charset=utf8mb4','testuser','pass');
+    $pdo = new PDO('mysql:host=127.0.0.1; dbname=mydb; charset=utf8mb4','testuser','pass');
    
     $name = $_POST['name'];//ユーザーから受け取った値を変数に入れる
    
