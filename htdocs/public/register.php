@@ -33,6 +33,7 @@ if ($password !== $password_conf) {
 if (count($err) === 0) {
   // ユーザを登録する処理
   $hasCreated = UserLogic::createUser($_POST);
+ 
   
   if(!$hasCreated) {
     $err[] = '登録に失敗しました';
@@ -56,7 +57,7 @@ if (count($err) === 0) {
 <?php else : ?>
   <p>ユーザ登録が完了しました。</p>
 <?php endif ?>
-<a href="./signup_form.php">戻る</a>
+<a href="./login_form.php">ログイン画面へ</a>
   
 </body>
 </html>

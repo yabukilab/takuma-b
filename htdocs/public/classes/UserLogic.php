@@ -2,6 +2,7 @@
 
 require_once '../db.php';
 
+
 class UserLogic
 {
   /**
@@ -22,7 +23,7 @@ class UserLogic
     $arr[] = password_hash($userData['password'], PASSWORD_DEFAULT);
 
     try {
-      $stmt = $db->prepare($sql);
+      $stmt = connect()->prepare($sql);
       $result = $stmt->execute($arr);
       return $result;
     } catch(\Exception $e) {
@@ -80,7 +81,7 @@ class UserLogic
     $arr[] = $email;
 
     try {
-      $stmt = connect()->prepare($sql);
+      $stmt = connect() ->prepare($sql);
       $stmt->execute($arr);
       // SQLの結果を返す
       $user = $stmt->fetch();

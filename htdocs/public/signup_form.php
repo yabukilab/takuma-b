@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once '../db.php';
+require_once '../functions.php';
 require_once './classes//UserLogic.php';
 
 $result = UserLogic::checkLogin();
@@ -32,19 +32,19 @@ unset($_SESSION['login_err']);
   <div id="form">  
   <p>
     <label for="username">ユーザ名</label>
-    <input type="text" name="username" size="60" required>
+    <input type="text" name="username" size="60">
   </p>
   <p>
     <label for="email">メールアドレス</label>
-    <input type="email" name="email" size="60" required>
+    <input type="email" name="email" size="60">
   </p>
   <p>
     <label for="password">パスワード</label>
-    <input type="password" name="password" size="60"requied>
+    <input type="password" name="password" size="60">
   </p>
   <p>
     <label for="password_conf">パスワード確認</label>
-    <input type="password" name="password_conf" size="60" required>
+    <input type="password" name="password_conf" size="60">
   </p>
   <input type="hidden" name="csrf_token" value="<?php echo h(setToken()); ?>">
   <p>

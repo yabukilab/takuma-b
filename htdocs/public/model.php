@@ -2,17 +2,18 @@
 
 function getUserData($params){
 	//DBの接続情報
-	require_once '../../db.php';
+	require_once '../db.php';
 
-	$host = DB_HOST;
-    $db   = DB_NAME;
-    $user = DB_USER;
-    $pass = DB_PASS;
+	$dbServer = '127.0.0.1';
+    $dbUser = isset($_SERVER['MYSQL_USER'])     ? $_SERVER['MYSQL_USER']     : 'testuser';
+    $dbPass = isset($_SERVER['MYSQL_PASSWORD']) ? $_SERVER['MYSQL_PASSWORD'] : 'pass';
+    $dbName = isset($_SERVER['MYSQL_DB'])       ? $_SERVER['MYSQL_DB']       : 'mydb';
 
-    $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
+    $dsn = "mysql:host={$dbServer};dbname={$dbName};charset=utf8";
+
 
 	//DBコネクタを生成
-	$Mysqli = new mysqli($host, $user, $pass, $db);
+	$Mysqli = new mysqli($dbServer, $dbUser, $dbPass, $dbName);
 	if ($Mysqli->connect_error) {
 			error_log($Mysqli->connect_error);
 			exit;

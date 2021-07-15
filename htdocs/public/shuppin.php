@@ -4,23 +4,15 @@ error_reporting(E_ALL);
 session_start();
 
 require_once './classes/UserLogic.php';
-require_once '../functions.php';
+require_once '../db.php';
 
-//　ログインしているか判定し、していなかったら新規登録画面へ返す
-$result = UserLogic::checkLogin();
 
-if (!$result) {
-  $_SESSION['login_err'] = 'ユーザを登録してログインしてください！';
-  header('Location: signup_form.php');
-  return;
-}
 
-$login_user = $_SESSION['login_user'];
 
 
 if(isset($_POST['datapost'])){
  $_SESSION['name'] = $_POST['name']; header('Location: regist.php'); 
- $_SESSION['freeans'] = $_POST['freeans']; header('Location: regist.php');
+ 
  $_SESSION['email'] = $_POST['email']; header('Location: regist.php');
 }
 ?>

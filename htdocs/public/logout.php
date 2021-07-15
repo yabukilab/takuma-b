@@ -15,6 +15,7 @@ if (!$result) {
 
 // ログアウトする
 UserLogic::logout();
+header('Location: login_form.php');
 
 ?>
 <!DOCTYPE html>
