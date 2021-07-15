@@ -1,5 +1,5 @@
 <?php 
-header("Content-type: text/html; charset=utf-8");
+
 session_start();
 
 require_once './classes/UserLogic.php';
@@ -34,7 +34,7 @@ $PData = getUserData($_GET);
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PHPの検索機能</title>
 <link rel="stylesheet" href="style.css">
