@@ -24,10 +24,10 @@ DROP TABLE IF EXISTS `product`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `product` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (18,'pen','s1942121bb@s.chibakoudai.jp'),(19,'教科書','s1942121nn@s.chibakoudai.jp'),(21,'過去問','s1942121aa@s.chibakoudai.jp');
+INSERT INTO `product` VALUES (18,'pen','s1942121bb@s.chibakoudai.jp'),(19,'きょうかしょ','s1942121nn@s.chibakoudai.jp'),(21,'過去問','s1942121aa@s.chibakoudai.jp');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -76,4 +76,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-15 18:40:44
+-- Dump completed on 2021-07-15 19:02:51
