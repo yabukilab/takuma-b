@@ -18,7 +18,7 @@
    
     $email = $_POST['email'];
     
-    $stmt = $pdo -> prepare("INSERT INTO product(name, email) VALUES(:name, :email)");//登録準備
+    $stmt = $pdo -> prepare('INSERT INTO product (name, email) VALUES (:name, :email)');//登録準備
     $stmt -> bindValue(':name', $name, PDO::PARAM_STR);//登録する文字の型を固定
     $stmt -> bindValue(':email', $email, PDO::PARAM_STR);//登録する文字の型を固定
     $stmt -> execute();//データベースの登録を実行
